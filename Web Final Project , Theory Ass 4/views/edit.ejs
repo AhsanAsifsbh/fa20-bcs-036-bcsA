@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Clothing Admin</title>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h2>Product Management</h2>
+        <form method="post" action="/update" enctype="multipart/form-data">
+            <div class="form-row">
+                <input type="hidden" name="productId" value="<%= data._id %>">
+
+                <div class="col-md-4 mb-3">
+                    <label for="productName">Product Name</label>
+                    <input type="text" class="form-control" id="productName" name="productName" value=<%= data.productName%> required>
+                </div>
+               
+                
+            </div>
+            
+
+
+            <div class="col-md-4 mb-3">
+                <label for="productImage">Product Image</label>
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="productImage" name="image" value=<%= data.image%> required>
+                        <label class="custom-file-label" for="productImage">Choose file</label>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-4">
+                    <button class="btn btn-primary btn-block" type="submit">Update Product</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+   
+</body>
+
+</html>
